@@ -11,9 +11,13 @@ hr management platform
     - Activate the virtual environment
         - On Windows `source .venv\Scripts\activate`
         - On macOS/Linux `source .venv/bin/activate`
-4. **Install dependencies:**
+
+4. **Create environment file**
+   Create a copy of .env.template file and replace the placeholders with you variables values.
+
+5. **Install dependencies:**
     - `pip install -r requirements.txt`
-5. **Apply database migrations:**
+6. **Apply database migrations:**
     - `python manage.py migrate`
-6. **Run the development server:**
+7. **Run the development server:**
     - `python manage.py runserver`

@@ -3,8 +3,14 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+# Environment variables
+.env
+
 # C extensions
 *.so
+
+#vscode settings
+.vscode/
 
 # Distribution / packaging
 .Python
