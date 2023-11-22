@@ -61,7 +61,7 @@ ROOT_URLCONF = "peepo.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [],
+        "DIRS": [BASE_DIR / "templates"],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
@@ -148,3 +148,8 @@ LOGGING = {
         "level": "DEBUG",
     },
 }
+
+
+# Redirections for successful login and logout
+LOGIN_REDIRECT_URL = "home"
+LOGOUT_REDIRECT_URL = "home"
