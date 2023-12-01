@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+
+{% block title %}Peepo - Home{% endblock %}
+
+{% block content %}
+        {% include 'header.html' %}
+    <div id="hero" style="display: flex;">
+        <div>
+            <div class="stream">Streamline Your <br/>HR Processes <br/>with Our <br/>Comprehensive <br/>Management Platform
+            </div>
+            <div class="stream-byline">
+                <div><span>Welcome to  </span><span style="color: #0C8CE9;">Peepo</span><span>, where we revolutionize the <br/>way you handle Human Resources. Our cutting-edge HR management <br/>platform is designed to simplify and optimize every aspect of your HR <br/>processes, empowering your team to focus on what matters most - your people.</span></div> 
+            </div>
+            <a style="text-decoration: none;" href="#"><div class="blue-button"><div class="get-started">GET STARTED</div></div></a>
+            <div class="byline">See what our users say about us...</div>
+        
+            <!-- Hero section -->
+            <div class="hero-section">
+                <div class="hero-tab" ></div>
+                <div class="hero-name">John Smith</div>
+                <div class="hero-title">UI/UX Designer, 7 years</div>
+                <img class="hero-img" src="../static/image 4.png" alt="">
+                <img style="width: 100%; height: 50%; padding-left: 4em;" src="../static/image 3.png" /> 
+                
+                <div class="hero-tab2"></div>
+                <div class="hero-name2">Petra Cooks</div>
+                <div class="hero-title2">Accountant, 7 years</div>
+                <img class="hero-img2" src="../static/image 6.png" alt="">
+
+                <div class="hero-tab3"></div>
+                <div class="hero-name3">James Browns</div>
+                <div class="hero-title3">Software Developer, 2 years</div>
+                <img class="hero-img3" src="../static/image 5.png" alt="">
+            </div>
+        </div>       
+    </div>
+{% endblock %}
