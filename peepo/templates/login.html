@@ -1,0 +1,19 @@
+
+<!-- login form -->
+{% extends "base.html" %}
+{% block title %}Login{% endblock %}
+{% block content %}
+<div class="container" style="width:400px;">
+  <br><br><br><br><br><br>
+<div class="card" style="width: 22rem;">
+<div class="card-body">
+  <h2 class="card-title" style="align-items:center">Peepo Login</h2>
+<form method="post">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit" class="btn btn-primary">Log In</button>
+</form>
+</div>
+</div>
+</div>
+{% endblock %}
