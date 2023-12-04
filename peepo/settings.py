@@ -44,6 +44,7 @@ INSTALLED_APPS = [
 	#peepo apps
     "user_auth.apps.UserAuthConfig",
 	#"3rd party apps"
+    'bootstrap5',
 ]
 
 MIDDLEWARE = [
@@ -61,7 +62,7 @@ ROOT_URLCONF = "peepo.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [BASE_DIR /'peepo'/'templates'],
+        "DIRS": [BASE_DIR / "peepo/templates"],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
@@ -152,3 +153,8 @@ LOGGING = {
         "level": "DEBUG",
     },
 }
+
+
+# Redirections for successful login and logout
+LOGIN_REDIRECT_URL = "home"
+LOGOUT_REDIRECT_URL = "home"
