@@ -2,22 +2,26 @@
 {% block content %}
 
 <header style="margin-top: 3em;">
-    <div id="logo">
-        <div id="logo-peepo">Peepo</div>
-        <img class="logo-img" src="{% static 'image 1.png' %}" alt="logo">
-    </div>
-    <div class="nav">
-        <nav>
-            <ul>
-                <a href="#"><li>Home</li></a>
-                <a href="#"><li>Features</li></a>
-                <a href="#"><li>Pricing</li></a>
-                <a href="#"><li>About</li></a>
-            </ul>
-        </nav>
-    </div>
-    <div style="width: 50%; height: 100%">
-        <img src="{% static 'image_2.png' %}" alt="">
+    <div class="container">
+        <div class="row">
+            <div div class="col">
+                <div class="navbar-brand link-primary fs-1" style="font-family: Sansita;">Peepo</div>
+                <img class="logo-img" style="position: absolute; top: 20.02px;" src="{% static 'image 1.png' %}" alt="logo" >
+            </div>
+            <div class="col">
+                <nav class="navbar navbar-expand-lg">
+                    <ul class="navbar-nav" style="font-family: Inter;">
+                        <a class="nav-link" href="#"><li class="link-primary fs-3">Home</li></a>
+                        <a class="nav-link" href="#"><li class="link-primary fs-3">Features</li></a>
+                        <a class="nav-link" href="#"><li class="link-primary fs-3">Pricing</li></a>
+                        <a class="nav-link" href="#"><li class="link-primary fs-3">About</li></a>
+                    </ul>
+                </nav>
+            </div>
+            <div class="col">
+                <img src="{% static 'image_2.png' %}" alt="">
+            </div>
+        </div>
     </div>
 </header>
 

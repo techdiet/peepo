@@ -23,6 +23,10 @@ urlpatterns = [
     path("admin/", admin.site.urls),
 	path("auth/", include("user_auth.urls"), name="user_auth"),
     path("login/", auth_views.LoginView.as_view(template_name="login.html") , name="login"),
-    path("", TemplateView.as_view(template_name='home.html'), name="index"),
+    path("password_reset/", auth_views.PasswordResetView.as_view(template_name="registration/reset_pass_form.html") , name="password_reset"),
+    path("reset/confirm/<uidb64>/<token>/", auth_views.PasswordResetConfirmView.as_view() , name="password_reset_confirm"),
+    path("password_reset/done/", auth_views.PasswordResetDoneView.as_view(template_name="registration/password_reset_done.html"), name="password_reset_done"),
+    path("password_reset/confirm/", auth_views.PasswordResetCompleteView.as_view(), name="password_reset_complete"),
+    path("", TemplateView.as_view(template_name="home.html"), name="index"),
 ]
 
