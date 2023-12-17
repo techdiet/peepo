@@ -1,0 +1,92 @@
+<!-- /user_auth/hr_dashboard.html -->
+{% extends 'user_auth/base.html' %}
+{% block title %}HR Dashboard{% endblock %}
+{% block header %}HR Dashboard{% endblock %}
+{% block content %}
+
+{% load static %}
+
+<div class="container">
+    <div class="container-fluid">
+        <div class="row">
+    
+            <!-- Navbar -->
+            <div class="col-md-3">
+                {% include 'user_auth/sidebar.html' %}
+            </div>
+    
+            <!-- Profile Card -->
+            <div class="col-md-9">
+    
+                <div class="card border-light text-end mb-4" style="max-width: 32rem;">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="{% static 'profile.jpg' %}" class="img-fluid rounded-start" alt="Profile Picture" width="200" height="200" padding-left="4em">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="font-weight-bold">
+                                <h5>Employee Information</h5>
+                                <p>Surname: {{ user.surname }}</p>
+                                <p>Other_Names: {{ user.other_names }}</p>
+                                <p>Gender: {{ user.gender }}</p>
+                                <p>Department: {{ user.department }}</p>
+                                <a href="#" class="btn btn-primary">Other Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+    <!-- Quick Overview Section -->
+    <div class="row mb-4">
+        <div class="col-md-4">
+            <div class="card border-primary bg-light">
+                <div class="card-body">
+                    <h5 class="card-title">Total Employees</h5>
+                    <p class="card-text">500</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card border-primary bg-light">
+                <div class="card-body">
+                    <h5 class="card-title">Pending Requests</h5>
+                    <p class="card-text">20</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card border-primary bg-light">
+                <div class="card-body">
+                    <h5 class="card-title">Upcoming Events</h5>
+                    <p class="card-text">5</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Recent Activities Section -->
+    <div class="card border-light mb-4">
+        <div class="card-body">
+            <h5 class="card-title">Recent Activities</h5>
+            <ul class="list-group">
+                <li class="list-group-item">John Doe joined the company</li>
+                <li class="list-group-item">Jane Doe's profile updated</li>
+                <li class="list-group-item">New employee orientation scheduled</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Upcoming Events Section -->
+    <div class="card border-light">
+        <div class="card-body">
+            <h5 class="card-title">Upcoming Events</h5>
+            <ul class="list-group">
+                <li class="list-group-item">Employee Training - Dec 15, 2023</li>
+                <li class="list-group-item">Company Retreat - Jan 20, 2024</li>
+            </ul>
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}
